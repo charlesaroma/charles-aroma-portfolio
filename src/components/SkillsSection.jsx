@@ -40,17 +40,6 @@ const categoryIcons = {
 export const SkillsSection = () => {
   /* State Management */
   const [activeCategory, setActiveCategory] = useState("all");
-  const [currentCategoryIndex, setCurrentCategoryIndex] = useState(0);
-
-  /* Auto-rotate through categories */
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentCategoryIndex((prev) => (prev + 1) % categories.length);
-      setActiveCategory(categories[(currentCategoryIndex + 1) % categories.length]);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [currentCategoryIndex]);
 
   /* Filter Skills Based on Category */
   const filteredSkills = skills.filter(
@@ -70,15 +59,12 @@ export const SkillsSection = () => {
           {categories.map((category, key) => (
             <motion.button
               key={key}
-              onClick={() => {
-                setActiveCategory(category);
-                setCurrentCategoryIndex(categories.indexOf(category));
-              }}
+              onClick={() => setActiveCategory(category)}
               className={cn(
-                "px-5 py-2 rounded-full transition-colors duration-300 capitalize flex items-center cursor-pointer border border-transparent hover:border-primary/40 shadow-sm backdrop-blur-md dark:bg-black/20",
+                "px-5 py-2 rounded-full transition-colors duration-300 capitalize flex items-center cursor-pointer border border-transparent",
                 activeCategory === category
                   ? "border-primary text-primary"
-                  : "bg-transparent dark:bg-secondary/70 text-foreground hover:bg-gray-50 dark:hover:bg-secondary/90"
+                  : "text-foreground hover:border-primary/40"
               )}
               style={{ minWidth: 110 }}
               whileHover={{ scale: 1.05 }}
@@ -107,8 +93,7 @@ export const SkillsSection = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.3, delay: key * 0.1 }}
-                  className="!bg-transparent dark:bg-black/30 dark:backdrop-blur-md p-6 rounded-2xl border border-primary/10 hover:scale-105 transition-transform duration-300 relative overflow-hidden group"
-                  style={{ backgroundColor: 'transparent' }}
+                  className="p-6 rounded-2xl border border-primary/10 hover:scale-105 transition-transform duration-300 relative overflow-hidden group"
                   whileHover={{ 
                     scale: 1.05,
                     boxShadow: "0 10px 25px rgba(0,0,0,0.1)"

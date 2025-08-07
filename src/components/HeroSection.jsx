@@ -80,7 +80,7 @@ export const HeroSection = () => {
 
           {/* Hero Description */}
           <p className="text-base sm:text-normal md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 opacity-0 animate-fade-in-delay-4">
-            Passionate about creating beautiful, responsive, and user-friendly web experiences. I specialize in modern JavaScript frameworks and crafting intuitive interfaces that users love.
+            Passionate about creating beautiful, responsive web experiences with modern JavaScript frameworks.
           </p>
 
           {/* Social Links */}
@@ -99,14 +99,22 @@ export const HeroSection = () => {
             </a>
           </div>
 
-          {/* Call to Action Button */}
-          <div className="pt-4 opacity-0 animate-fade-in-delay-6">
+          {/* Call to Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 pt-4 opacity-0 animate-fade-in-delay-6">
             <a 
-              href="#projects" 
-              className="cosmic-button cursor-pointer"
-              onClick={(e) => handleNavClick("#projects", e)}
+              href="#contact" 
+              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 px-6 py-3 rounded-lg font-medium text-center"
+              onClick={(e) => handleNavClick("#contact", e)}
             >
-              View My Work
+              Get In Touch
+            </a>
+            <a 
+              href="/public/CV Charles Aroma.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-all duration-300 px-6 py-3 rounded-lg font-medium text-center"
+            >
+              Download CV
             </a>
           </div>
         </div>
