@@ -3,8 +3,10 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 export const ThemeToggle = () => {
+  /* State Management */
   const [isDarkMode, setIsDarkMode] = useState(false);
 
+  /* Initialize Theme from LocalStorage */
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
     if (storedTheme === "dark") {
@@ -16,6 +18,7 @@ export const ThemeToggle = () => {
     }
   }, []);
 
+  /* Toggle Theme Function */
   const toggleTheme = () => {
     if (isDarkMode) {
       document.documentElement.classList.remove("dark");
@@ -33,13 +36,14 @@ export const ThemeToggle = () => {
       onClick={toggleTheme}
       className={cn(
         "fixed max-sm:hidden top-[1.25rem] right-4 z-50 p-2 rounded-full transition-colors duration-300 cursor-pointer",
-        "focus:outlin-hidden"
+        "focus:outline-none hover:bg-primary/10"
       )}
     >
+      {/* Theme Icon */}
       {isDarkMode ? (
-        <Sun className="h-6 w-6 text-yellow-300" />
+        <Sun className="h-6 w-6 text-amber-400" />
       ) : (
-        <Moon className="h-6 w-6 text-blue-900" />
+        <Moon className="h-6 w-6 text-slate-700" />
       )}
     </button>
   );

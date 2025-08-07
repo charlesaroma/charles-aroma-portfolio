@@ -1,20 +1,41 @@
 import { Briefcase, Code, User } from "lucide-react";
 
 export const AboutSection = () => {
+  /* Smooth Scroll Function */
+  const smoothScrollTo = (href) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
+  /* Navigation Click Handler */
+  const handleNavClick = (href, e) => {
+    e.preventDefault();
+    smoothScrollTo(href);
+  };
+
   return (
     <section id="about" className="py-24 px-4 relative">
-      {" "}
       <div className="container mx-auto max-w-5xl">
+        {/* Section Header */}
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           About <span className="text-primary"> Me</span>
         </h2>
 
+        {/* Main Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Text Content */}
           <div className="space-y-6">
+            {/* Title */}
             <h3 className="text-2xl font-semibold">
               Frontend Developer & UI/UX Enthusiast
             </h3>
 
+            {/* Description Paragraphs */}
             <p className="text-muted-foreground">
               I'm a dedicated frontend developer with a passion for creating engaging and accessible 
               user interfaces. My focus is on building responsive, performant web applications that 
@@ -27,9 +48,13 @@ export const AboutSection = () => {
               users' digital experiences seamless and enjoyable.
             </p>
 
+            {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-              <a href="#contact" className="cosmic-button">
-                {" "}
+              <a 
+                href="#contact" 
+                className="cosmic-button cursor-pointer"
+                onClick={(e) => handleNavClick("#contact", e)}
+              >
                 Get In Touch
               </a>
 
@@ -43,7 +68,9 @@ export const AboutSection = () => {
             </div>
           </div>
 
+          {/* Right Column - Service Cards */}
           <div className="grid grid-cols-1 gap-6">
+            {/* Frontend Development Card */}
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
@@ -57,6 +84,8 @@ export const AboutSection = () => {
                 </div>
               </div>
             </div>
+            
+            {/* UI/UX Design Card */}
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
@@ -70,6 +99,8 @@ export const AboutSection = () => {
                 </div>
               </div>
             </div>
+            
+            {/* Responsive Design Card */}
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">

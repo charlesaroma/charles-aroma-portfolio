@@ -4,10 +4,12 @@ import { useEffect, useState } from "react";
 // id, size, x, y, delay, animationDuration
 
 export const StarBackground = () => {
+  /* State Management */
   const [stars, setStars] = useState([]);
   const [meteors, setMeteors] = useState([]);
   const [orbs, setOrbs] = useState([]);
 
+  /* Initialize Background Elements */
   useEffect(() => {
     generateStars();
     generateMeteors();
@@ -23,6 +25,7 @@ export const StarBackground = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  /* Generate Stars Function */
   const generateStars = () => {
     const numberOfStars = Math.floor(
       (window.innerWidth * window.innerHeight) / 12000
@@ -47,6 +50,7 @@ export const StarBackground = () => {
     setStars(newStars);
   };
 
+  /* Generate Meteors Function */
   const generateMeteors = () => {
     const numberOfMeteors = 1;
     const newMeteors = [];
@@ -59,7 +63,7 @@ export const StarBackground = () => {
         y: Math.random() * 30,
         delay: Math.random() * 20,
         animationDuration: Math.random() * 4 + 5,
-        color: Math.random() > 0.5 ? "from-white via-primary/60 to-transparent" : "from-blue-300 via-cyan-200 to-transparent",
+        color: Math.random() > 0.5 ? "from-emerald-300 via-teal-200 to-transparent" : "from-cyan-300 via-teal-100 to-transparent",
         opacity: Math.random() * 0.3 + 0.2,
       });
     }
@@ -67,6 +71,7 @@ export const StarBackground = () => {
     setMeteors(newMeteors);
   };
 
+  /* Generate Orbs Function */
   const generateOrbs = () => {
     const numberOfOrbs = Math.floor(
       (window.innerWidth * window.innerHeight) / 80000
@@ -82,7 +87,7 @@ export const StarBackground = () => {
         y: Math.random() * 100,
         opacity: Math.random() * 0.1 + 0.05,
         animationDuration: Math.random() * 8 + 6,
-        color: Math.random() > 0.5 ? "from-primary/20 to-transparent" : "from-blue-400/20 to-transparent",
+        color: Math.random() > 0.5 ? "from-primary/20 to-transparent" : "from-emerald-400/20 to-transparent",
       });
     }
 
@@ -91,6 +96,7 @@ export const StarBackground = () => {
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+      {/* Background Orbs */}
       {orbs.map((orb) => (
         <div
           key={orb.id}
@@ -107,6 +113,7 @@ export const StarBackground = () => {
         />
       ))}
 
+      {/* Background Stars */}
       {stars.map((star) => (
         <div
           key={star.id}
@@ -135,37 +142,22 @@ export const StarBackground = () => {
         </div>
       ))}
 
+      {/* Background Meteors */}
       {meteors.map((meteor) => (
         <div
           key={meteor.id}
+          className={`meteor animate-meteor`}
           style={{
-            position: "absolute",
+            width: meteor.size + "px",
+            height: meteor.size + "px",
             left: meteor.x + "%",
             top: meteor.y + "%",
-            animationDelay: meteor.delay,
+            animationDelay: meteor.delay + "s",
             animationDuration: meteor.animationDuration + "s",
             opacity: meteor.opacity,
-            pointerEvents: "none",
-            zIndex: 1,
-            transform: "rotate(-45deg)",
+            background: `linear-gradient(to right, ${meteor.color})`,
           }}
-          className="meteor animate-meteor"
-        >
-          {/* Star head - just the bright circular part */}
-          <div
-            className="rounded-full"
-            style={{
-              width: meteor.size * 8 + "px",
-              height: meteor.size * 8 + "px",
-              background: "radial-gradient(circle, #fff 60%, #facc15 100%)",
-              boxShadow: "0 0 16px 4px #fff7b2, 0 0 32px 8px #facc15",
-              position: "absolute",
-              left: 0,
-              top: 0,
-              zIndex: 2,
-            }}
-          />
-        </div>
+        />
       ))}
     </div>
   );

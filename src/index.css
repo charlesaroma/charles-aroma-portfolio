@@ -8,6 +8,9 @@
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
 
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
   --color-card: hsl(var(--card));
 
   --animate-float: float 6s ease-in-out infinite;
@@ -69,8 +72,14 @@
 
     --card: 0 0% 100%;
 
-    --primary: 250 47% 60%;
+    --primary: 167 65% 40%;
     --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
     --border: 214 32% 91%;
   }
@@ -81,8 +90,14 @@
 
     --card: 222 47% 8%;
 
-    --primary: 250 65% 65%;
+    --primary: 167 70% 50%;
     --primary-foreground: 213 31% 91%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 213 31% 91%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
 
     --border: 217 33% 20%;
   }
@@ -124,7 +139,11 @@
 
 @utility text-glow {
   @apply relative;
-  text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
+  text-shadow: 0 0 10px rgba(20, 184, 166, 0.5);
+}
+
+@utility text-gradient {
+  @apply bg-gradient-to-r from-primary via-emerald-500 to-teal-500 bg-clip-text text-transparent;
 }
 
 @utility card-hover {
@@ -139,8 +158,8 @@
 }
 
 @utility cosmic-button {
-  @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium 
-         transition-all duration-300 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)]
+  @apply px-6 py-2 rounded-full bg-gradient-to-r from-primary to-emerald-500 text-primary-foreground font-medium 
+         transition-all duration-300 hover:shadow-[0_0_20px_rgba(20,184,166,0.4)]
          hover:scale-105 active:scale-95;
 }
 
@@ -150,8 +169,8 @@
 }
 
 @utility meteor {
-  @apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full;
-  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+  @apply absolute bg-gradient-to-r from-emerald-300 via-teal-200 to-transparent rounded-full;
+  box-shadow: 0 0 10px 5px rgba(20, 184, 166, 0.3);
 }
 
 #root {
