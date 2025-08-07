@@ -52,18 +52,18 @@ export const HeroSection = () => {
       <StarBackground />
       
       {/* Main Content Container */}
-      <div className="container max-w-5xl mx-auto z-10 flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-20 text-center lg:text-left">
+      <div className="container max-w-5xl mx-auto z-10 flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-20 text-center lg:text-left min-h-[calc(100vh-5rem)]">
         {/* Text Content */}
-        <div className="space-y-6 flex-1 order-2 lg:order-1">
+        <div className="space-y-4 lg:space-y-6 flex-1 order-2 lg:order-1">
           {/* Hero Title */}
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tight">
             <span className="opacity-0 animate-fade-in">Hi, I&apos;m</span>
             <span className="text-primary opacity-0 animate-fade-in-delay-1"> Charles</span>
             <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2"> Aroma</span>
           </h1>
 
           {/* Animated Role Display */}
-          <div className="h-8 md:h-10 lg:h-12 flex items-center justify-center lg:justify-start opacity-0 animate-fade-in-delay-3">
+          <div className="h-6 sm:h-8 md:h-10 lg:h-12 flex items-center justify-center lg:justify-start opacity-0 animate-fade-in-delay-3">
             <AnimatePresence mode="wait">
               <motion.h2
                 key={currentRole}
@@ -71,7 +71,7 @@ export const HeroSection = () => {
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: -20, opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className="text-lg md:text-xl lg:text-2xl font-medium text-primary"
+                className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-primary"
               >
                 {roles[currentRole]}
               </motion.h2>
@@ -79,31 +79,31 @@ export const HeroSection = () => {
           </div>
 
           {/* Hero Description */}
-          <p className="text-base sm:text-normal md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 opacity-0 animate-fade-in-delay-4">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 opacity-0 animate-fade-in-delay-4">
             Passionate about creating beautiful, responsive web experiences with modern JavaScript frameworks.
           </p>
 
           {/* Social Links */}
-          <div className="flex justify-center lg:justify-start space-x-6 pt-2 pb-8 md:pb-2 opacity-0 animate-fade-in-delay-5">
+          <div className="flex justify-center lg:justify-start space-x-4 sm:space-x-6 pt-2 pb-4 lg:pb-2 opacity-0 animate-fade-in-delay-5">
             <a href="https://github.com/charlesaroma" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-primary transition-colors">
-              <Github size={28} />
+              <Github size={24} className="sm:w-7 sm:h-7" />
             </a>
             <a href="https://www.linkedin.com/in/charles-aroma-8955b62a2" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-primary transition-colors">
-              <Linkedin size={28} />
+              <Linkedin size={24} className="sm:w-7 sm:h-7" />
             </a>
             <a href="https://x.com/charles_aroma_" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="hover:text-primary transition-colors">
-              <Twitter size={28} />
+              <Twitter size={24} className="sm:w-7 sm:h-7" />
             </a>
             <a href="https://www.instagram.com/charles_aroma?igsh=cTd0Z2p4bHVya3d3" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-primary transition-colors">
-              <Instagram size={28} />
+              <Instagram size={24} className="sm:w-7 sm:h-7" />
             </a>
           </div>
 
           {/* Call to Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 pt-4 opacity-0 animate-fade-in-delay-6">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 lg:pt-4 opacity-0 animate-fade-in-delay-6">
             <a 
               href="#contact" 
-              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 px-6 py-3 rounded-lg font-medium text-center"
+              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium text-center text-sm sm:text-base"
               onClick={(e) => handleNavClick("#contact", e)}
             >
               Get In Touch
@@ -112,35 +112,37 @@ export const HeroSection = () => {
               href="/public/CV Charles Aroma.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-all duration-300 px-6 py-3 rounded-lg font-medium text-center"
+              className="bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-all duration-300 px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium text-center text-sm sm:text-base"
             >
               Download CV
             </a>
           </div>
         </div>
         
-        {/* Profile Image */}
-        <div className="relative w-48 md:w-64 lg:w-72 mb-8 lg:mb-0 order-1 lg:order-2">
-          <img
-            src="https://ik.imagekit.io/ldeismm29/Charles%20Aroma/IMG_6625-Photoroom.png?updatedAt=1754572485882"
-            alt="Charles Aroma"
-            className="w-48 h-auto md:w-64 lg:w-72 md:h-auto object-cover animate-fade-in block"
-          />
-          {/* Image Gradient Overlay */}
-          <div
-            className="pointer-events-none absolute left-0 right-0 bottom-0 h-1/3 md:h-1/2"
-            style={{
-              background: "linear-gradient(to bottom, rgba(255,255,255,0) 20%, hsl(var(--background)) 100%)",
-              zIndex: 2,
-            }}
-          />
+        {/* Profile Image Container */}
+        <div className="relative w-40 sm:w-48 md:w-64 lg:w-72 mb-4 lg:mb-0 order-1 lg:order-2">
+          {/* Unique Container with Border */}
+          <div className="relative p-2 rounded-full bg-gradient-to-r from-primary/20 via-emerald-500/20 to-teal-500/20 backdrop-blur-sm border border-primary/30 shadow-lg">
+            <div className="relative w-36 sm:w-44 md:w-60 lg:w-68 h-36 sm:h-44 md:h-60 lg:h-68 rounded-full overflow-hidden border-4 border-white/20 shadow-xl">
+              <img
+                src="https://ik.imagekit.io/ldeismm29/Charles%20Aroma/IMG_6625-Photoroom.png?updatedAt=1754572485882"
+                alt="Charles Aroma"
+                className="w-full h-full object-cover object-center animate-fade-in"
+                style={{ objectPosition: 'center 20%' }}
+              />
+              {/* Subtle gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
+            </div>
+            {/* Glowing effect */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/30 via-emerald-500/30 to-teal-500/30 blur-xl opacity-50 animate-pulse" />
+          </div>
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce z-10">
-        <span className="text-sm text-muted-foreground mb-2">Scroll</span>
-        <ArrowDown className="h-5 w-5 text-primary" />
+      <div className="absolute bottom-2 sm:bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce z-10">
+        <span className="text-xs sm:text-sm text-muted-foreground mb-1 sm:mb-2">Scroll</span>
+        <ArrowDown className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
       </div>
     </section>
   );
