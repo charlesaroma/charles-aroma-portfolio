@@ -11,7 +11,7 @@
   <a href="https://charles-aroma.netlify.app" target="_blank">
     <img src="./banner.png" alt="Charles Aroma - Portfolio (Light Mode)" width="100%">
   </a>
-  <p><em>🌙 Dark Mode • ☀️ Light Mode</em></p>
+  <p><em>☀️ Light Mode</em></p>
   <br />
   
   <div>
