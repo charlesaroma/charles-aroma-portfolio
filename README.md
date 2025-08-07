@@ -4,6 +4,11 @@
   <br />
   <a href="https://charles-aroma.netlify.app" target="_blank">
     <img src="./banner2.png" alt="Charles Aroma - Portfolio (Dark Mode)" width="100%">
+  </a>
+  <p><em>🌙 Dark Mode</em></p>
+  <br />
+
+  <a href="https://charles-aroma.netlify.app" target="_blank">
     <img src="./banner.png" alt="Charles Aroma - Portfolio (Light Mode)" width="100%">
   </a>
   <p><em>🌙 Dark Mode • ☀️ Light Mode</em></p>
@@ -43,6 +48,7 @@ I'm **Charles Aroma**, a passionate Frontend Developer specializing in creating 
 ## ⚡ Featured Projects
 
 ### 🎨 Portfolio Website
+
 **Modern, responsive portfolio** built with React and TailwindCSS featuring dark mode, smooth animations, and Framer Motion transitions.
 
 **Tech Stack:** React, TailwindCSS, Vite, Framer Motion  
@@ -50,12 +56,14 @@ I'm **Charles Aroma**, a passionate Frontend Developer specializing in creating 
 **GitHub:** [View Code](https://github.com/charlesaroma/atuhaire-emmanuel-portfolio)
 
 ### 🎬 Nyati Motion Pictures
+
 **Collaborated on frontend development** for Uganda's leading film production company, creating a responsive platform that showcases authentic African stories.
 
 **Tech Stack:** React, JavaScript, TailwindCSS  
 **Live Demo:** [nyatimotionpictures.com](https://nyatimotionpictures.com)
 
 ### 📋 Task Management App
+
 **Interactive task management application** with real-time updates, drag-and-drop functionality, and responsive design.
 
 **Tech Stack:** React, JavaScript, TailwindCSS, Framer Motion
@@ -65,17 +73,20 @@ I'm **Charles Aroma**, a passionate Frontend Developer specializing in creating 
 ## 🛠️ Technical Skills
 
 ### **Frontend Development**
+
 - **React** - Component-based architecture, hooks, context
 - **TypeScript** - Type safety and enhanced development experience
 - **TailwindCSS** - Utility-first styling and responsive design
 - **Framer Motion** - Smooth animations and micro-interactions
 
 ### **Build Tools & Performance**
+
 - **Vite** - Lightning-fast development and optimized builds
 - **Git** - Version control and collaborative development
 - **Responsive Design** - Mobile-first approach across all devices
 
 ### **UI/UX & Design**
+
 - **Modern Design Systems** - Consistent, scalable component libraries
 - **Accessibility** - WCAG compliant, keyboard navigation
 - **Performance Optimization** - Lazy loading, code splitting, optimization
@@ -85,12 +96,14 @@ I'm **Charles Aroma**, a passionate Frontend Developer specializing in creating 
 ## 🌟 Portfolio Features
 
 ### **Interactive Experience**
+
 - 🌑 **Dark/Light Mode Toggle** - Persistent theme preference with smooth transitions
 - ✨ **Animated Backgrounds** - Dynamic star field, meteors, and cosmic effects
 - 🎭 **Role Showcase** - Animated text transitions showcasing different skills
 - 📱 **Responsive Navigation** - Glassmorphism design with mobile optimization
 
 ### **Professional Sections**
+
 - 🎯 **Hero Section** - Animated role transitions and smooth scroll navigation
 - 👨‍💻 **About Section** - Professional background and service highlights
 - 📊 **Skills Grid** - Interactive category filtering with progress animations
@@ -98,6 +111,7 @@ I'm **Charles Aroma**, a passionate Frontend Developer specializing in creating 
 - 📩 **Contact Form** - Functional contact form with toast notifications
 
 ### **Performance & Quality**
+
 - ⚡ **Lightning Fast** - Optimized with Vite for instant loading
 - 📱 **Mobile First** - Responsive design across all devices
 - ♿ **Accessible** - WCAG compliant with keyboard navigation
@@ -108,12 +122,14 @@ I'm **Charles Aroma**, a passionate Frontend Developer specializing in creating 
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Node.js (v16 or higher)
 - npm or yarn
 
 ### Installation
 
 **Using npm:**
+
 ```bash
 # Clone the repository
 git clone https://github.com/charlesaroma/charles-aroma-portfolio.git
@@ -129,6 +145,7 @@ npm run dev
 ```
 
 **Using yarn:**
+
 ```bash
 # Clone the repository
 git clone https://github.com/charlesaroma/charles-aroma-portfolio.git
@@ -148,12 +165,14 @@ Visit [http://localhost:5173](http://localhost:5173) to view the portfolio.
 ### Build for Production
 
 **Using npm:**
+
 ```bash
 npm run build
 npm run preview
 ```
 
 **Using yarn:**
+
 ```bash
 yarn build
 yarn preview
