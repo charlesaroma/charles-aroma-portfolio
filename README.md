@@ -178,6 +178,12 @@ yarn build
 yarn preview
 ```
 
+## SEO Configuration
+
+- Create a `.env` file with your production URL: `VITE_SITE_URL=https://your-domain.com`.
+- Update `public/robots.txt` and `public/sitemap.xml` with your real domain.
+- Per-page SEO is managed via `react-helmet` and the reusable `SEO` component in `src/components/SEO.jsx`.
+
 ---
 
 ## 📞 Let's Connect

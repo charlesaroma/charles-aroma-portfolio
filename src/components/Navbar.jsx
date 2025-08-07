@@ -20,14 +20,41 @@ export const Navbar = () => {
   const [activeSection, setActiveSection] = useState("hero");
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  /* Initialize Theme from LocalStorage */
+  /* Initialize theme from storage or system preference and keep in sync
+     with ThemeToggle and OS changes */
   useEffect(() => {
+    const deriveFromSystem = () => window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
     const storedTheme = localStorage.getItem("theme");
-    if (storedTheme === "dark") {
-      setIsDarkMode(true);
-    } else {
-      setIsDarkMode(false);
+    setIsDarkMode(storedTheme ? storedTheme === "dark" : deriveFromSystem());
+
+    const handleSystem = (e) => {
+      if (!localStorage.getItem("theme")) {
+        setIsDarkMode(e.matches);
+      }
+    };
+    let mq;
+    if (window.matchMedia) {
+      mq = window.matchMedia("(prefers-color-scheme: dark)");
+      try {
+        mq.addEventListener("change", handleSystem);
+      } catch (_err) {
+        mq.addListener(handleSystem);
+      }
     }
+
+    const handleCustom = (e) => setIsDarkMode(!!e.detail?.isDark);
+    window.addEventListener("theme:changed", handleCustom);
+
+    return () => {
+      window.removeEventListener("theme:changed", handleCustom);
+      if (mq) {
+        try {
+          mq.removeEventListener("change", handleSystem);
+        } catch (_err) {
+          mq.removeListener(handleSystem);
+        }
+      }
+    };
   }, []);
 
   /* Scroll Event Handler */

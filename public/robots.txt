@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Disallow build artifacts
+Disallow: /assets/
+
+Sitemap: https://charles-aroma.netlify.app/sitemap.xml
+
+

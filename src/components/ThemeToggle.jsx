@@ -6,29 +6,54 @@ export const ThemeToggle = () => {
   /* State Management */
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  /* Initialize Theme from LocalStorage */
+  /* Initialize theme from localStorage or system preference; sync to system changes
+     if the user hasn't explicitly chosen a theme. */
   useEffect(() => {
+    const root = document.documentElement;
     const storedTheme = localStorage.getItem("theme");
-    if (storedTheme === "dark") {
-      setIsDarkMode(true);
-      document.documentElement.classList.add("dark");
-    } else {
-      localStorage.setItem("theme", "light");
-      setIsDarkMode(false);
+
+    const apply = (dark) => {
+      setIsDarkMode(dark);
+      root.classList.toggle("dark", dark);
+    };
+
+    if (storedTheme === "dark" || storedTheme === "light") {
+      apply(storedTheme === "dark");
+    } else if (window.matchMedia) {
+      const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+      apply(mediaQuery.matches);
+
+      const handleChange = (e) => {
+        // Only follow system changes if user hasn't set an explicit theme
+        if (!localStorage.getItem("theme")) {
+          apply(e.matches);
+          window.dispatchEvent(
+            new CustomEvent("theme:changed", { detail: { isDark: e.matches } })
+          );
+        }
+      };
+
+      try {
+        mediaQuery.addEventListener("change", handleChange);
+        return () => mediaQuery.removeEventListener("change", handleChange);
+      } catch (_err) {
+        // Safari compatibility
+        mediaQuery.addListener(handleChange);
+        return () => mediaQuery.removeListener(handleChange);
+      }
     }
   }, []);
 
   /* Toggle Theme Function */
   const toggleTheme = () => {
-    if (isDarkMode) {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-      setIsDarkMode(false);
-    } else {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-      setIsDarkMode(true);
-    }
+    const next = !isDarkMode;
+    document.documentElement.classList.toggle("dark", next);
+    localStorage.setItem("theme", next ? "dark" : "light");
+    setIsDarkMode(next);
+    // Notify other components (e.g., Navbar) to stay in sync
+    window.dispatchEvent(
+      new CustomEvent("theme:changed", { detail: { isDark: next } })
+    );
   };
 
   return (

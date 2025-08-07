@@ -24,7 +24,7 @@ export const HeroSection = () => {
     }, 2500);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [roles.length]);
 
   /* Smooth Scroll Function */
   const smoothScrollTo = (href) => {
