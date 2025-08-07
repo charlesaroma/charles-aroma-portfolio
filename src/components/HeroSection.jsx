@@ -121,20 +121,20 @@ export const HeroSection = () => {
         
         {/* Profile Image Container */}
         <div className="relative w-40 sm:w-48 md:w-64 lg:w-72 mb-4 lg:mb-0 order-1 lg:order-2">
-          {/* Unique Container with Border */}
-          <div className="relative p-2 rounded-full bg-gradient-to-r from-primary/20 via-emerald-500/20 to-teal-500/20 backdrop-blur-sm border border-primary/30 shadow-lg">
-            <div className="relative w-36 sm:w-44 md:w-60 lg:w-68 h-36 sm:h-44 md:h-60 lg:h-68 rounded-full overflow-hidden border-4 border-white/20 shadow-xl">
+          {/* Clean Container with Subtle Border */}
+          <div className="relative p-1 rounded-full bg-gradient-to-r from-primary/10 via-emerald-500/10 to-teal-500/10 border border-primary/20 shadow-lg">
+            <div className="relative w-38 sm:w-46 md:w-62 lg:w-70 h-38 sm:h-46 md:h-62 lg:h-70 rounded-full overflow-hidden border-2 border-white/30 shadow-xl">
               <img
                 src="https://ik.imagekit.io/ldeismm29/Charles%20Aroma/IMG_6625-Photoroom.png?updatedAt=1754572485882"
                 alt="Charles Aroma"
                 className="w-full h-full object-cover object-center animate-fade-in"
                 style={{ objectPosition: 'center 20%' }}
               />
-              {/* Subtle gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
+              {/* Very subtle gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent" />
             </div>
-            {/* Glowing effect */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/30 via-emerald-500/30 to-teal-500/30 blur-xl opacity-50 animate-pulse" />
+            {/* Subtle glowing effect */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 via-emerald-500/20 to-teal-500/20 blur-lg opacity-30" />
           </div>
         </div>
       </div>
