@@ -4,6 +4,7 @@
   <br />
   <a href="https://charles-aroma.netlify.app" target="_blank">
     <img src="./banner.png" alt="Charles Aroma - Portfolio" width="100%">
+    <img src="./banner.png" alt="Charles Aroma - Portfolio" width="100%">
   </a>
   <br />
   
