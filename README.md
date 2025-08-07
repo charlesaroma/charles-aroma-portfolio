@@ -3,9 +3,10 @@
 <div align="center">
   <br />
   <a href="https://charles-aroma.netlify.app" target="_blank">
-    <img src="./banner.png" alt="Charles Aroma - Portfolio" width="100%">
-    <img src="./banner.png" alt="Charles Aroma - Portfolio" width="100%">
+    <img src="./banner2.png" alt="Charles Aroma - Portfolio (Dark Mode)" width="100%">
+    <img src="./banner.png" alt="Charles Aroma - Portfolio (Light Mode)" width="100%">
   </a>
+  <p><em>🌙 Dark Mode • ☀️ Light Mode</em></p>
   <br />
   
   <div>
