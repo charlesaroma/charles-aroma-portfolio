@@ -1,137 +1,175 @@
-# Build a Modern Portfolio Website with React & TailwindCSS
+# Charles Aroma - Frontend Developer Portfolio
 
 <div align="center">
   <br />
   <a href="https://charles-aroma.netlify.app" target="_blank">
-    <img src="./banner1.png" alt="Charles Aroma - Portfolio">
-    <img src="./banner.png" alt="Charles Aroma - Portfolio">
+    <img src="./banner.png" alt="Charles Aroma - Portfolio" width="100%">
   </a>
   <br />
+  
   <div>
     <img src="https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
     <img src="https://img.shields.io/badge/-TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss" alt="Tailwind CSS" />
     <img src="https://img.shields.io/badge/-Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
-    <img src="https://img.shields.io/badge/-Lucide Icons-FD4D4D?style=for-the-badge&logo=lucide" alt="Lucide Icons" />
-    <img src="https://img.shields.io/badge/-Radix UI-9D4EDD?style=for-the-badge&logo=data:image/svg+xml;base64..." alt="Radix UI" />
+    <img src="https://img.shields.io/badge/-Framer Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion" />
+    <img src="https://img.shields.io/badge/-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
   </div>
   
   <div align="center">
-   Click the above link to check out my portfolio website 
-    <a href="https://charles-aroma.netlify.app" target="_blank"><b>Charles Aroma</b></a>
+    <strong>🚀 Live Portfolio:</strong> 
+    <a href="https://charles-aroma.netlify.app" target="_blank"><b>charles-aroma.netlify.app</b></a>
   </div>
   <br />
 </div>
 
-## 📋 Table of Contents
+---
 
-1. [Introduction](#-introduction)
-2. [Tech Stack](#-tech-stack)
-3. [Features](#-features)
-4. [Quick Start](#-quick-start)
-5. [Screenshots](#-screenshots)
-6. [Deployment](#-deployment)
+## 👨‍💻 About Me
+
+I'm **Charles Aroma**, a passionate Frontend Developer specializing in creating beautiful, responsive, and user-friendly web experiences. With expertise in modern JavaScript frameworks and a keen eye for design, I craft intuitive interfaces that users love.
+
+### 🎯 What I Bring to Your Team
+
+- **Modern Tech Stack**: React, TypeScript, TailwindCSS, Framer Motion
+- **Performance Focus**: Optimized builds with Vite, responsive design
+- **User Experience**: Intuitive interfaces with smooth animations
+- **Collaboration**: Experience working with teams on production projects
+- **Problem Solving**: Creative solutions for complex UI challenges
 
 ---
 
-## 🚀 Introduction
+## ⚡ Featured Projects
 
-In this tutorial, you'll learn how to build a modern portfolio website using **React**, **TailwindCSS**, **Vite**, and **Lucide Icons**. From dark mode support to responsive animations and deployable project showcases, this video walks you through every step—perfect for developers looking to level up their frontend skills or apply for jobs.
+### 🎨 Portfolio Website
+**Modern, responsive portfolio** built with React and TailwindCSS featuring dark mode, smooth animations, and Framer Motion transitions.
 
-🎥 Watch the full tutorial: [YouTube](https://youtu.be/YOUR_VIDEO_ID)
+**Tech Stack:** React, TailwindCSS, Vite, Framer Motion  
+**Live Demo:** [atuhaire-emmanuel.netlify.app](https://atuhaire-emmanuel.netlify.app)  
+**GitHub:** [View Code](https://github.com/charlesaroma/atuhaire-emmanuel-portfolio)
 
----
+### 🎬 Nyati Motion Pictures
+**Collaborated on frontend development** for Uganda's leading film production company, creating a responsive platform that showcases authentic African stories.
 
-## ⚙️ Tech Stack
+**Tech Stack:** React, JavaScript, TailwindCSS  
+**Live Demo:** [nyatimotionpictures.com](https://nyatimotionpictures.com)
 
-- **React** – Component-based UI development
-- **Vite** – Lightning-fast build tool
-- **TailwindCSS** – Utility-first CSS for styling
-- **Lucide Icons** – Clean and beautiful icon pack
-- **Radix UI** – Accessible component primitives
-- **TypeScript (optional)** – Type safety and tooling
-- **GitHub & Netlify** – Deployment
+### 📋 Task Management App
+**Interactive task management application** with real-time updates, drag-and-drop functionality, and responsive design.
 
----
-
-## ⚡️ Features
-
-- 🌑 **Light/Dark Mode Toggle**
-  Save theme preference in local storage with beautiful transitions
-
-- 💫 **Animated Backgrounds**
-  Stars, meteors, scroll effects, and glowing UI elements
-
-- 📱 **Responsive Navigation**
-  Desktop and mobile menus with glassmorphism
-
-- 👨‍💻 **Hero & About Sections**
-  Showcase who you are with smooth intro animations and buttons
-
-- 📊 **Skills Grid**
-  Filterable progress bars and categories with animated width
-
-- 🖼️ **Projects Showcase**
-  Display screenshots, tech stacks, and GitHub/demo links
-
-- 📩 **Contact Section**
-  Social icons + responsive contact form with toast notifications
-
-- 🚀 **One-Click Deployment**
-  Easily host your site with Netlify and GitHub
+**Tech Stack:** React, JavaScript, TailwindCSS, Framer Motion
 
 ---
 
-## 👌 Quick Start
+## 🛠️ Technical Skills
+
+### **Frontend Development**
+- **React** - Component-based architecture, hooks, context
+- **TypeScript** - Type safety and enhanced development experience
+- **TailwindCSS** - Utility-first styling and responsive design
+- **Framer Motion** - Smooth animations and micro-interactions
+
+### **Build Tools & Performance**
+- **Vite** - Lightning-fast development and optimized builds
+- **Git** - Version control and collaborative development
+- **Responsive Design** - Mobile-first approach across all devices
+
+### **UI/UX & Design**
+- **Modern Design Systems** - Consistent, scalable component libraries
+- **Accessibility** - WCAG compliant, keyboard navigation
+- **Performance Optimization** - Lazy loading, code splitting, optimization
+
+---
+
+## 🌟 Portfolio Features
+
+### **Interactive Experience**
+- 🌑 **Dark/Light Mode Toggle** - Persistent theme preference with smooth transitions
+- ✨ **Animated Backgrounds** - Dynamic star field, meteors, and cosmic effects
+- 🎭 **Role Showcase** - Animated text transitions showcasing different skills
+- 📱 **Responsive Navigation** - Glassmorphism design with mobile optimization
+
+### **Professional Sections**
+- 🎯 **Hero Section** - Animated role transitions and smooth scroll navigation
+- 👨‍💻 **About Section** - Professional background and service highlights
+- 📊 **Skills Grid** - Interactive category filtering with progress animations
+- 🖼️ **Projects Showcase** - Full-screen project previews with live demos
+- 📩 **Contact Form** - Functional contact form with toast notifications
+
+### **Performance & Quality**
+- ⚡ **Lightning Fast** - Optimized with Vite for instant loading
+- 📱 **Mobile First** - Responsive design across all devices
+- ♿ **Accessible** - WCAG compliant with keyboard navigation
+- 🔍 **SEO Optimized** - Meta tags, semantic HTML, performance metrics
+
+---
+
+## 🚀 Quick Start
 
 ### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
 
-- [Node.js](https://nodejs.org/)
-- [Git](https://git-scm.com/)
+### Installation
 
-### Clone and Run
-
+**Using npm:**
 ```bash
-git clone https://github.com/yourusername/react-tailwind-portfolio.git
-cd react-tailwind-portfolio
+# Clone the repository
+git clone https://github.com/charlesaroma/charles-aroma-portfolio.git
+
+# Navigate to project directory
+cd charles-aroma-portfolio
+
+# Install dependencies
 npm install
+
+# Start development server
 npm run dev
 ```
 
-Your app will be available at: [http://localhost:5173](http://localhost:5173)
+**Using yarn:**
+```bash
+# Clone the repository
+git clone https://github.com/charlesaroma/charles-aroma-portfolio.git
+
+# Navigate to project directory
+cd charles-aroma-portfolio
+
+# Install dependencies
+yarn install
+
+# Start development server
+yarn dev
+```
+
+Visit [http://localhost:5173](http://localhost:5173) to view the portfolio.
+
+### Build for Production
+
+**Using npm:**
+```bash
+npm run build
+npm run preview
+```
+
+**Using yarn:**
+```bash
+yarn build
+yarn preview
+```
 
 ---
 
-## 🖼️ Screenshots
+## 📞 Let's Connect
 
-> 📸 Add screenshots of your Hero section, Projects grid, and Contact form here to show off your site.
+I'm always excited to discuss new opportunities and collaborate on interesting projects. Let's build something amazing together!
 
----
-
-## ☁️ Deployment
-
-### Deploy on Netlify
-
-1. Push your code to GitHub
-2. Go to [netlify.com](https://netlify.com)
-3. Click **Add new site** > **Import an existing project**
-4. Connect your GitHub repository
-5. For build command, enter: `npm run build`
-6. For publish directory, enter: `dist`
-7. Click **Deploy Site**
-
-Your live website will be hosted on a custom Netlify subdomain (e.g. `https://charles-aroma.netlify.app`)
+- **Portfolio:** [charles-aroma.netlify.app](https://charles-aroma.netlify.app)
+- **GitHub:** [@charlesaroma](https://github.com/charlesaroma)
+- **LinkedIn:** [Charles Aroma](https://www.linkedin.com/in/charles-aroma-8955b62a2)
+- **Email:** charlesaroma9@gmail.com
 
 ---
 
-## 🔗 Useful Links
-
-- [React Documentation](https://reactjs.org/)
-- [Tailwind CSS Docs](https://tailwindcss.com/)
-- [Lucide Icons](https://lucide.dev/)
-- [Radix UI](https://www.radix-ui.com/)
-- [Vite](https://vitejs.dev/)
-- [Netlify](https://netlify.com/)
-
----
-
-Let me know if you'd like me to generate a version with your actual GitHub repo, YouTube URL, or a banner image suggestion!
+<div align="center">
+  <sub>Built with ❤️ using React, TailwindCSS, and Framer Motion</sub>
+</div>
