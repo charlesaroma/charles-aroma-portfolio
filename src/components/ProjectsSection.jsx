@@ -7,18 +7,18 @@ const projects = [
     title: "Portfolio Website",
     description: "A modern, responsive portfolio built with React and TailwindCSS featuring dark mode and animations.",
     image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS", "Vite"],
-    demoUrl: "#",
-    githubUrl: "#",
+    tags: ["React", "TailwindCSS", "Vite", "framer-motion"],
+    demoUrl: "https://atuhaire-emmanuel.netlify.app/",
+    githubUrl: "https://github.com/charlesaroma/atuhaire-emmanuel-portfolio",
   },
   {
     id: 2,
-    title: "E-commerce Platform",
+    title: "Nyati Motion Pictures",
     description:
-      "Frontend-focused e-commerce solution with responsive design, user authentication, and modern UI components.",
+      "Collaborated on frontend development for a film production company website with responsive design and modern UI components.",
     image: "/projects/project2.png",
-    tags: ["React", "JavaScript", "CSS3"],
-    demoUrl: "#",
+    tags: ["React", "JavaScript", "TailwindCSS", "Collaboration"],
+    demoUrl: "https://nyatimotionpictures.com/",
     githubUrl: "#",
   },
   {
@@ -27,7 +27,7 @@ const projects = [
     description:
       "Interactive task management application with real-time updates, drag-and-drop functionality, and responsive design.",
     image: "/projects/project3.png",
-    tags: ["React", "JavaScript", "TailwindCSS"],
+    tags: ["React", "JavaScript", "TailwindCSS", "framer-motion"],
     demoUrl: "#",
     githubUrl: "#",
   },
@@ -61,7 +61,7 @@ export const ProjectsSection = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
 

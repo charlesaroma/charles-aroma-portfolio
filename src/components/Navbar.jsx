@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { ThemeToggle } from "./ThemeToggle";
 
 /* Navigation Items */
@@ -17,6 +18,17 @@ export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  /* Initialize Theme from LocalStorage */
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme === "dark") {
+      setIsDarkMode(true);
+    } else {
+      setIsDarkMode(false);
+    }
+  }, []);
 
   /* Scroll Event Handler */
   useEffect(() => {
@@ -45,6 +57,32 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  /* Disable Scroll When Mobile Menu is Open */
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
+
+  /* Toggle Theme Function */
+  const toggleTheme = () => {
+    if (isDarkMode) {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+      setIsDarkMode(false);
+    } else {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+      setIsDarkMode(true);
+    }
+  };
+
   /* Smooth Scroll Function */
   const smoothScrollTo = (href) => {
     const element = document.querySelector(href);
@@ -63,28 +101,35 @@ export const Navbar = () => {
     setIsMenuOpen(false);
   };
 
-  return (
-    <nav
-      className={cn(
-        "fixed w-full z-40 transition-all duration-300",
-        isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
-      )}
-    >
-      <div className="container flex items-center justify-between">
-        {/* Logo */}
-        <a
-          className="text-xl font-bold text-primary flex items-center cursor-pointer"
-          href="#hero"
-          onClick={(e) => handleNavClick("#hero", e)}
-        >
-          <span className="relative z-10">
-            <span className="text-glow text-foreground"> Charles </span>{" "}
-            Aroma
-          </span>
-        </a>
+  /* Mobile Menu Component */
+  const MobileMenu = () => (
+    <div className="fixed inset-0 bg-background/95 backdrop-blur-md z-[9999] flex flex-col items-center justify-center md:hidden">
+      {/* Close Button - Top Right */}
+      <button
+        onClick={() => setIsMenuOpen(false)}
+        className="absolute top-7 right-8 p-2 text-foreground z-[10000]"
+        aria-label="Close Menu"
+      >
+        <X size={34} />
+      </button>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+      {/* Custom Theme Toggle - Far Left */}
+      <div className="absolute animate-bounce top-8 left-8 z-[10000]">
+        <button
+          onClick={toggleTheme}
+          className="p-2 rounded-full transition-colors duration-300 cursor-pointer hover:bg-primary/10"
+        >
+          {isDarkMode ? (
+            <Sun className="h-8 w-8 text-amber-400" />
+          ) : (
+            <Moon className="h-8 w-8 text-slate-700" />
+          )}
+        </button>
+      </div>
+      
+      <div className="flex flex-col items-center space-y-8">
+        {/* Navigation Links */}
+        <div className="flex flex-col space-y-8 text-xl">
           {navItems.map((item, key) => {
             const sectionId = item.href.replace('#', '');
             const isActive = activeSection === sectionId;
@@ -105,32 +150,34 @@ export const Navbar = () => {
               </a>
             );
           })}
-          <div className="ml-4 flex items-center">
-            <ThemeToggle />
-          </div>
         </div>
+      </div>
+    </div>
+  );
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsMenuOpen((prev) => !prev)}
-          className="md:hidden p-2 text-foreground z-50"
-          aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />} {" "}
-        </button>
+  return (
+    <>
+      <nav
+        className={cn(
+          "fixed w-full z-40 transition-all duration-300",
+          isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
+        )}
+      >
+        <div className="container flex items-center justify-between">
+          {/* Logo */}
+          <a
+            className="text-xl font-bold text-primary flex items-center cursor-pointer"
+            href="#hero"
+            onClick={(e) => handleNavClick("#hero", e)}
+          >
+            <span className="relative z-10">
+              <span className="text-glow text-foreground"> Charles </span>{" "}
+              Aroma
+            </span>
+          </a>
 
-        {/* Mobile Navigation Menu */}
-        <div
-          className={cn(
-            "fixed inset-0 bg-background/95 backdroup-blur-md z-40 flex flex-col items-center justify-center",
-            "transition-all duration-300 md:hidden",
-            isMenuOpen
-              ? "opacity-100 pointer-events-auto"
-              : "opacity-0 pointer-events-none"
-          )}
-        >
-          <ThemeToggle />
-          <div className="flex flex-col space-y-8 text-xl mt-6">
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item, key) => {
               const sectionId = item.href.replace('#', '');
               const isActive = activeSection === sectionId;
@@ -151,9 +198,24 @@ export const Navbar = () => {
                 </a>
               );
             })}
+            <div className="ml-4 flex items-center">
+              <ThemeToggle />
+            </div>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+            className="md:hidden p-2 text-foreground z-[60] relative"
+            aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+          >
+            {isMenuOpen ? <X size={30} /> : <Menu size={30} />} {" "}
+          </button>
         </div>
-      </div>
-    </nav>
+      </nav>
+
+      {/* Mobile Menu Portal */}
+      {isMenuOpen && createPortal(<MobileMenu />, document.body)}
+    </>
   );
 };
