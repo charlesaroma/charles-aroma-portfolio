@@ -79,7 +79,7 @@ export const HeroSection = () => {
           </div>
 
           {/* Hero Description */}
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 opacity-0 animate-fade-in-delay-4">
+          <p className="text-base sm:text-normal text-muted-foreground max-w-2xl mx-auto lg:mx-0 opacity-0 animate-fade-in-delay-4">
             Passionate about creating beautiful, responsive web experiences with modern JavaScript frameworks.
           </p>
 

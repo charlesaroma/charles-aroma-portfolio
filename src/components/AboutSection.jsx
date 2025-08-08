@@ -36,16 +36,12 @@ export const AboutSection = () => {
             </h3>
 
             {/* Description Paragraphs */}
-            <p className="text-muted-foreground">
-              I'm a dedicated frontend developer with a passion for creating engaging and accessible 
-              user interfaces. My focus is on building responsive, performant web applications that 
-              provide exceptional user experiences.
+            <p className="text-base sm:text-normal text-muted-foreground">
+              I'm a passionate Frontend Developer with a keen eye for creating beautiful, responsive, and user-friendly web experiences. With expertise in modern JavaScript frameworks and a strong foundation in design principles, I craft intuitive interfaces that users love.
             </p>
 
-            <p className="text-muted-foreground">
-              I specialize in modern frontend technologies like React, JavaScript, and CSS frameworks. 
-              Every project is an opportunity to craft beautiful, intuitive interfaces that make 
-              users' digital experiences seamless and enjoyable.
+            <p className="text-base sm:text-normal text-muted-foreground">
+              My journey in web development started with a curiosity for how things work on the web, and it has evolved into a passion for creating seamless digital experiences. I believe in writing clean, maintainable code and staying up-to-date with the latest industry trends and best practices.
             </p>
 
             {/* Action Buttons */}
@@ -78,8 +74,8 @@ export const AboutSection = () => {
                 </div>
                 <div className="text-left">
                   <h4 className="font-semibold text-lg"> Frontend Development</h4>
-                  <p className="text-muted-foreground">
-                    Building responsive and interactive web applications with modern frameworks.
+                  <p className="text-base sm:text-normal text-muted-foreground">
+                    Building responsive and accessible user interfaces that work seamlessly across all devices and platforms.
                   </p>
                 </div>
               </div>
@@ -93,8 +89,8 @@ export const AboutSection = () => {
                 </div>
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">UI/UX Design</h4>
-                  <p className="text-muted-foreground">
-                    Creating intuitive and engaging user interfaces that delight users.
+                  <p className="text-base sm:text-normal text-muted-foreground">
+                    Crafting engaging user experiences with smooth animations and intuitive interactions.
                   </p>
                 </div>
               </div>
@@ -109,8 +105,8 @@ export const AboutSection = () => {
 
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">Responsive Design</h4>
-                  <p className="text-muted-foreground">
-                    Ensuring seamless experiences across all devices and screen sizes.
+                  <p className="text-base sm:text-normal text-muted-foreground">
+                    Building performant web applications with modern frameworks and optimization techniques.
                   </p>
                 </div>
               </div>

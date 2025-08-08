@@ -41,9 +41,8 @@ export const ContactSection = () => {
         </h2>
 
         {/* Section Description */}
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Have a project in mind or want to collaborate? Feel free to reach out.
-          I'm always open to discussing new opportunities and exciting challenges.
+        <p className="text-base sm:text-normal text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+          Ready to collaborate on your next project? Let's discuss how we can bring your ideas to life with modern web technologies.
         </p>
 
         {/* Main Content Grid */}

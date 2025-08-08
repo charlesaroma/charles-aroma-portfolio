@@ -43,10 +43,8 @@ export const ProjectsSection = () => {
         </h2>
 
         {/* Section Description */}
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Here are some of my recent frontend projects showcasing my skills in responsive design, 
-          user interface development, and modern web technologies. Each project demonstrates my 
-          commitment to creating beautiful and functional user experiences.
+        <p className="text-base sm:text-normal text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+          Explore my latest projects showcasing modern web development, responsive design, and creative problem-solving.
         </p>
 
         {/* Projects Grid */}
@@ -80,7 +78,7 @@ export const ProjectsSection = () => {
                 <h3 className="text-xl font-semibold mb-1"> {project.title}</h3>
                 
                 {/* Project Description */}
-                <p className="text-muted-foreground text-sm mb-4">
+                <p className="text-base sm:text-normal text-muted-foreground mb-4">
                   {project.description}
                 </p>
                 

@@ -6,11 +6,11 @@ export const Footer = () => {
       <div className="container mx-auto max-w-5xl">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex flex-col items-center md:items-start gap-4">
-            <p className="text-sm text-muted-foreground text-center md:text-left">
-              &copy; {new Date().getFullYear()} Charles Aroma. All rights reserved.
+            <p className="text-base sm:text-normal text-muted-foreground text-center md:text-left">
+              Built with React, TailwindCSS, and Framer Motion. Designed and developed with ❤️.
             </p>
-            <p className="text-xs text-muted-foreground text-center md:text-left">
-              Frontend Developer & UI/UX Enthusiast
+            <p className="text-base sm:text-normal text-muted-foreground text-center md:text-left">
+              © 2024 Charles Aroma. All rights reserved.
             </p>
           </div>
 
@@ -56,10 +56,10 @@ export const Footer = () => {
 
             <a
               href="#hero"
-              className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-colors ml-4"
+              className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-colors ml-4 animate-bounce cursor-pointer"
               aria-label="Back to top"
             >
-              <ArrowUp size={20} />
+              <ArrowUp size={25} />
             </a>
           </div>
         </div>
