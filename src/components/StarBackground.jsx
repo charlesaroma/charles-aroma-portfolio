@@ -7,17 +7,14 @@ export const StarBackground = () => {
   /* State Management */
   const [stars, setStars] = useState([]);
   const [meteors, setMeteors] = useState([]);
-  const [orbs, setOrbs] = useState([]);
 
   /* Initialize Background Elements */
   useEffect(() => {
     generateStars();
     generateMeteors();
-    generateOrbs();
 
     const handleResize = () => {
       generateStars();
-      generateOrbs();
     };
 
     window.addEventListener("resize", handleResize);
@@ -71,48 +68,8 @@ export const StarBackground = () => {
     setMeteors(newMeteors);
   };
 
-  /* Generate Orbs Function */
-  const generateOrbs = () => {
-    const numberOfOrbs = Math.floor(
-      (window.innerWidth * window.innerHeight) / 80000
-    );
-
-    const newOrbs = [];
-
-    for (let i = 0; i < numberOfOrbs; i++) {
-      newOrbs.push({
-        id: i,
-        size: Math.random() * 60 + 20,
-        x: Math.random() * 100,
-        y: Math.random() * 100,
-        opacity: Math.random() * 0.1 + 0.05,
-        animationDuration: Math.random() * 8 + 6,
-        color: Math.random() > 0.5 ? "from-primary/20 to-transparent" : "from-emerald-400/20 to-transparent",
-      });
-    }
-
-    setOrbs(newOrbs);
-  };
-
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-      {/* Background Orbs */}
-      {orbs.map((orb) => (
-        <div
-          key={orb.id}
-          className={`absolute rounded-full bg-gradient-to-br ${orb.color} animate-pulse-subtle`}
-          style={{
-            width: orb.size + "px",
-            height: orb.size + "px",
-            left: orb.x + "%",
-            top: orb.y + "%",
-            opacity: orb.opacity,
-            animationDuration: orb.animationDuration + "s",
-            filter: "blur(1px)",
-          }}
-        />
-      ))}
-
       {/* Background Stars */}
       {stars.map((star) => (
         <div
