@@ -42,7 +42,7 @@ export const ContactSection = () => {
 
         {/* Section Description */}
         <p className="text-base sm:text-normal text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Ready to collaborate on your next project? Let's discuss how we can bring your ideas to life with modern web technologies.
+          Ready to collaborate on your next project? Let&apos;s discuss how we can bring your ideas to life with modern web technologies.
         </p>
 
         {/* Main Content Grid */}
@@ -54,17 +54,17 @@ export const ContactSection = () => {
             </h3>
 
             {/* Contact Details */}
-            <div className="space-y-6 justify-center">
+            <div className="space-y-8">
               {/* Email Contact */}
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
+              <div className="flex items-center space-x-5">
+                <div className="p-4 rounded-xl bg-primary/10 border border-primary/20">
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
-                <div>
-                  <h4 className="font-medium"> Email</h4>
+                <div className="flex-1 text-left">
+                  <h4 className="font-semibold text-lg mb-1 text-left">Email</h4>
                   <a
                     href="mailto:charlesaroma9@gmail.com"
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-muted-foreground hover:text-primary transition-colors duration-300 text-base block text-left"
                   >
                     charlesaroma9@gmail.com
                   </a>
@@ -72,15 +72,15 @@ export const ContactSection = () => {
               </div>
               
               {/* Phone Contact */}
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
+              <div className="flex items-center space-x-5">
+                <div className="p-4 rounded-xl bg-primary/10 border border-primary/20">
                   <Phone className="h-6 w-6 text-primary" />
                 </div>
-                <div>
-                  <h4 className="font-medium"> Phone</h4>
+                <div className="flex-1 text-left">
+                  <h4 className="font-semibold text-lg mb-1 text-left">Phone</h4>
                   <a
                     href="tel:+256750328631"
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-muted-foreground hover:text-primary transition-colors duration-300 text-base block text-left"
                   >
                     Available upon request
                   </a>
@@ -88,28 +88,28 @@ export const ContactSection = () => {
               </div>
               
               {/* Location Contact */}
-              <div className="flex items-start space-x-4">
-                <div className="p-3 rounded-full bg-primary/10">
+              <div className="flex items-center space-x-5">
+                <div className="p-4 rounded-xl bg-primary/10 border border-primary/20">
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
-                <div>
-                  <h4 className="font-medium"> Location</h4>
-                  <a className="text-muted-foreground hover:text-primary transition-colors">
+                <div className="flex-1 text-left">
+                  <h4 className="font-semibold text-lg mb-1 text-left">Location</h4>
+                  <span className="text-muted-foreground text-base block text-left">
                     Available for remote work worldwide
-                  </a>
+                  </span>
                 </div>
               </div>
             </div>
 
             {/* Social Links */}
-            <div className="pt-8">
-              <h4 className="font-medium mb-4"> Connect With Me</h4>
-              <div className="flex space-x-4 justify-center">
+            <div className="pt-12">
+              <h4 className="font-semibold text-lg mb-6">Connect With Me</h4>
+              <div className="flex space-x-6">
                 <a 
                   href="https://github.com/charlesaroma" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors"
+                  className="p-3 rounded-xl bg-secondary/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 border border-border hover:border-primary/30"
                 >
                   <Github size={24} />
                 </a>
@@ -117,7 +117,7 @@ export const ContactSection = () => {
                   href="https://www.linkedin.com/in/charles-aroma-8955b62a2" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors"
+                  className="p-3 rounded-xl bg-secondary/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 border border-border hover:border-primary/30"
                 >
                   <Linkedin size={24} />
                 </a>
@@ -125,7 +125,7 @@ export const ContactSection = () => {
                   href="https://x.com/charles_aroma_" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors"
+                  className="p-3 rounded-xl bg-secondary/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 border border-border hover:border-primary/30"
                 >
                   <Twitter size={24} />
                 </a>
@@ -133,7 +133,7 @@ export const ContactSection = () => {
                   href="https://www.instagram.com/charles_aroma?igsh=cTd0Z2p4bHVya3d3" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors"
+                  className="p-3 rounded-xl bg-secondary/50 hover:bg-primary/10 hover:text-primary transition-all duration-300 border border-border hover:border-primary/30"
                 >
                   <Instagram size={24} />
                 </a>

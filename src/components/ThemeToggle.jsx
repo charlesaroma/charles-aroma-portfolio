@@ -60,7 +60,7 @@ export const ThemeToggle = () => {
     <button
       onClick={toggleTheme}
       className={cn(
-        "fixed top-[1.25rem] right-4 z-50 p-2 rounded-full transition-colors duration-300 cursor-pointer",
+        "p-2 rounded-full transition-colors duration-300 cursor-pointer animate-pulse",
         "focus:outline-none hover:bg-primary/10"
       )}
     >

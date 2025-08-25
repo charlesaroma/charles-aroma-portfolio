@@ -5,7 +5,7 @@ const projects = [
   {
     id: 1,
     title: "Portfolio Website",
-    description: "A modern, responsive portfolio built with React and TailwindCSS featuring dark mode and animations.",
+    description: "A modern, responsive portfolio website built with Vite React, React Js, Framer Motion,  and TailwindCSS featuring dark mode, light mode and animations.",
     image: "/projects/project1.png",
     tags: ["React", "TailwindCSS", "Vite", "framer-motion"],
     demoUrl: "https://atuhaire-emmanuel.netlify.app/",
@@ -48,56 +48,60 @@ export const ProjectsSection = () => {
         </p>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
           {projects.map((project, key) => (
             <div
               key={key}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+              className="group bg-card rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-border/50 hover:border-primary/20"
             >
               {/* Project Image */}
-              <div className="h-48 overflow-hidden">
+              <div className="h-52 lg:h-56 overflow-hidden bg-secondary/30">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
 
               {/* Project Content */}
-              <div className="p-6">
+              <div className="p-6 lg:p-8">
                 {/* Project Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-5">
                   {project.tags.map((tag, index) => (
-                    <span key={index} className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+                    <span key={index} className="px-3 py-1.5 text-xs font-medium rounded-full bg-primary/10 text-primary border border-primary/20">
                       {tag}
                     </span>
                   ))}
                 </div>
 
                 {/* Project Title */}
-                <h3 className="text-xl font-semibold mb-1"> {project.title}</h3>
+                <h3 className="text-xl lg:text-2xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors duration-300">{project.title}</h3>
                 
                 {/* Project Description */}
-                <p className="text-base sm:text-normal text-muted-foreground mb-4">
+                <p className="text-sm lg:text-base text-muted-foreground mb-6 leading-relaxed">
                   {project.description}
                 </p>
                 
                 {/* Project Links */}
-                <div className="flex justify-between items-center">
-                  <div className="flex space-x-3">
+                <div className="flex justify-between items-center pt-2">
+                  <div className="flex space-x-4">
                     <a
                       href={project.demoUrl}
                       target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 text-sm font-medium"
                     >
-                      <ExternalLink size={20} />
+                      <ExternalLink size={16} />
+                      Live Demo
                     </a>
                     <a
                       href={project.githubUrl}
                       target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 rounded-lg border border-border hover:bg-secondary transition-all duration-300 text-sm font-medium"
                     >
-                      <Github size={20} />
+                      <Github size={16} />
+                      Code
                     </a>
                   </div>
                 </div>
@@ -107,15 +111,15 @@ export const ProjectsSection = () => {
         </div>
 
         {/* View More Projects Button */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-16">
           <a
             href="https://github.com/charlesaroma"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl hover:scale-105"
           >
             View More Projects
-            <ArrowRight size={20} />
+            <ArrowRight size={22} />
           </a>
         </div>
       </div>

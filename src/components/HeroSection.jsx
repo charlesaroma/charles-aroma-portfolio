@@ -120,7 +120,7 @@ export const HeroSection = () => {
         </div>
         
         {/* Profile Image Container */}
-        <div className="relative w-40 sm:w-48 md:w-64 lg:w-72 mb-4 lg:mb-0 order-1 lg:order-2">
+        <div className="relative w-40 sm:w-48 md:w-64 lg:w-72 mb-4 lg:mb-0 order-1 lg:order-2 animate-float">
           {/* Clean Container with Subtle Border */}
           <div className="relative p-1 rounded-full bg-gradient-to-r from-primary/10 via-emerald-500/10 to-teal-500/10 border border-primary/20 shadow-lg">
             <div className="relative w-38 sm:w-46 md:w-62 lg:w-70 h-38 sm:h-46 md:h-62 lg:h-70 rounded-full overflow-hidden border-2 border-white/30 shadow-xl">
