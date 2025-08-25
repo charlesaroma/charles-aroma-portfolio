@@ -13,7 +13,7 @@ export const Home = () => {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <SEO
-        title="Frontend Developer & React Specialist"
+        title="Charles Aroma | Frontend Developer & React Specialist"
         description="Explore the portfolio of Charles Aroma—Frontend Developer & React Specialist. I build beautiful, accessible, and high‑performance web apps with React, Tailwind CSS, and Framer Motion."
         path="/"
         image={siteConfig.defaultImage}
