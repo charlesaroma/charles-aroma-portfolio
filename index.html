@@ -2,12 +2,39 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Runtime SEO is managed via react-helmet in the app -->
+    
+    <!-- Essential SEO Meta Tags (fallback before React Helmet loads) -->
+    <title>Charles Aroma | Frontend Developer & React Specialist Portfolio</title>
+    <meta name="description" content="Charles Aroma - Professional Frontend Developer & React Specialist. Expert in JavaScript, React, UI/UX Design, and modern web technologies. View my portfolio and get in touch for collaboration." />
+    <meta name="keywords" content="Charles Aroma, Frontend Developer, React Developer, JavaScript, Portfolio, Web Developer, UI/UX Designer" />
+    <meta name="author" content="Charles Aroma" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph fallback -->
+    <meta property="og:title" content="Charles Aroma | Frontend Developer & React Specialist Portfolio" />
+    <meta property="og:description" content="Charles Aroma - Professional Frontend Developer & React Specialist. Expert in JavaScript, React, UI/UX Design, and modern web technologies." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://charles-aroma.netlify.app" />
+    <meta property="og:image" content="https://ik.imagekit.io/ldeismm29/Charles%20Aroma/IMG_6625-Photoroom.png?updatedAt=1754572485882" />
+    
+    <!-- Twitter Card fallback -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Charles Aroma | Frontend Developer & React Specialist Portfolio" />
+    <meta name="twitter:description" content="Charles Aroma - Professional Frontend Developer & React Specialist. Expert in JavaScript, React, UI/UX Design, and modern web technologies." />
+    <meta name="twitter:image" content="https://ik.imagekit.io/ldeismm29/Charles%20Aroma/IMG_6625-Photoroom.png?updatedAt=1754572485882" />
+    
+    <!-- Icons and PWA -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180.png" />
     <link rel="icon" type="image/png" sizes="196x196" href="/favicon-196.png" />
+    
+    <!-- Performance and Security -->
+    <meta name="theme-color" content="#0ea5e9" />
+    <meta name="msapplication-TileColor" content="#0ea5e9" />
+    
+    <!-- Note: Runtime SEO is enhanced via react-helmet in the app -->
   </head>
   <body>
     <div id="root"></div>

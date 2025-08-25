@@ -17,33 +17,29 @@ export const Home = () => {
         description="Explore the portfolio of Charles Aroma—Frontend Developer & React Specialist. I build beautiful, accessible, and high‑performance web apps with React, Tailwind CSS, and Framer Motion."
         path="/"
         image={siteConfig.defaultImage}
-        structuredData={[
-          {
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            name: siteConfig.siteName,
-            url: siteConfig.siteUrl,
-            inLanguage: "en",
+        includePersonSchema={true}
+        includeWebsiteSchema={true}
+        includeProfessionalSchema={true}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Charles Aroma",
+          url: siteConfig.siteUrl,
+          image: siteConfig.defaultImage,
+          sameAs: [
+            "https://github.com/charlesaroma",
+            "https://www.linkedin.com/in/charles-aroma-8955b62a2",
+            "https://x.com/charles_aroma_",
+            "https://www.instagram.com/charles_aroma",
+          ],
+          jobTitle: "Frontend Developer & React Specialist",
+          worksFor: {
+            "@type": "Organization",
+            name: "Freelance",
           },
-          {
-            "@context": "https://schema.org",
-            "@type": "Person",
-            name: "Charles Aroma",
-            url: siteConfig.siteUrl,
-            image: siteConfig.defaultImage,
-            sameAs: [
-              "https://github.com/charlesaroma",
-              "https://www.linkedin.com/in/charles-aroma-8955b62a2",
-              "https://x.com/charles_aroma_",
-              "https://www.instagram.com/charles_aroma",
-            ],
-            jobTitle: "Frontend Developer",
-            worksFor: {
-              "@type": "Organization",
-              name: "Freelance",
-            },
-          },
-        ]}
+          knowsAbout: siteConfig.author.skills,
+          description: siteConfig.defaultDescription,
+        }}
       />
       {/* Background Effects */}
       <StarBackground />
