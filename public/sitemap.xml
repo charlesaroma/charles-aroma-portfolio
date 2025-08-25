@@ -1,12 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Main Portfolio Page -->
   <url>
     <loc>https://charles-aroma.netlify.app/</loc>
+    <lastmod>2024-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://ik.imagekit.io/ldeismm29/Charles%20Aroma/IMG_6625-Photoroom.png?updatedAt=1754572485882</image:loc>
+      <image:title>Charles Aroma - Frontend Developer & React Specialist</image:title>
+      <image:caption>Professional headshot of Charles Aroma, Frontend Developer specializing in React and modern web technologies</image:caption>
+    </image:image>
   </url>
+  
+  <!-- Hero Section -->
+  <url>
+    <loc>https://charles-aroma.netlify.app/#hero</loc>
+    <lastmod>2024-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- About Section -->
+  <url>
+    <loc>https://charles-aroma.netlify.app/#about</loc>
+    <lastmod>2024-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Skills Section -->
+  <url>
+    <loc>https://charles-aroma.netlify.app/#skills</loc>
+    <lastmod>2024-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Projects Section -->
+  <url>
+    <loc>https://charles-aroma.netlify.app/#projects</loc>
+    <lastmod>2024-08-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://charles-aroma.netlify.app/projects/project1.png</image:loc>
+      <image:title>Portfolio Website Project</image:title>
+      <image:caption>Modern responsive portfolio built with React and TailwindCSS</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://charles-aroma.netlify.app/projects/project2.png</image:loc>
+      <image:title>Nyati Motion Pictures</image:title>
+      <image:caption>Film production company website collaboration</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://charles-aroma.netlify.app/projects/project3.png</image:loc>
+      <image:title>Task Management App</image:title>
+      <image:caption>Interactive task management with drag-and-drop functionality</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Contact Section -->
+  <url>
+    <loc>https://charles-aroma.netlify.app/#contact</loc>
+    <lastmod>2024-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- CV/Resume -->
+  <url>
+    <loc>https://charles-aroma.netlify.app/CV%20Charles%20Aroma.pdf</loc>
+    <lastmod>2024-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- 404 Page -->
   <url>
     <loc>https://charles-aroma.netlify.app/404</loc>
+    <lastmod>2024-08-26</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.1</priority>
   </url>
