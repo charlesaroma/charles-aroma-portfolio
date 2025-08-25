@@ -223,13 +223,13 @@ export const generateProfessionalServiceStructuredData = () => ({
   "@type": "ProfessionalService",
   "name": "Charles Aroma - Frontend Development Services",
   "description": "Professional frontend development and React specialization services",
-  "provider": {
-    "@type": "Person",
-    "name": "Charles Aroma"
-  },
   "areaServed": "Worldwide",
-  "serviceType": "Web Development",
-  "url": siteConfig.siteUrl
+  "url": siteConfig.siteUrl,
+  "offers": {
+    "@type": "Offer",
+    "name": "Frontend Development Services",
+    "description": "React, TypeScript, and modern web development"
+  }
 });
 
 
