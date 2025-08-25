@@ -184,10 +184,6 @@ export const generatePersonStructuredData = () => ({
   "hasOccupation": {
     "@type": "Occupation",
     "name": "Frontend Developer",
-    "occupationLocation": {
-      "@type": "Place",
-      "name": "Remote Worldwide"
-    },
     "skills": siteConfig.author.roles.join(", ")
   },
   "worksFor": {

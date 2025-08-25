@@ -20,26 +20,6 @@ export const Home = () => {
         includePersonSchema={true}
         includeWebsiteSchema={true}
         includeProfessionalSchema={true}
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": "Person",
-          name: "Charles Aroma",
-          url: siteConfig.siteUrl,
-          image: siteConfig.defaultImage,
-          sameAs: [
-            "https://github.com/charlesaroma",
-            "https://www.linkedin.com/in/charles-aroma-8955b62a2",
-            "https://x.com/charles_aroma_",
-            "https://www.instagram.com/charles_aroma",
-          ],
-          jobTitle: "Frontend Developer & React Specialist",
-          worksFor: {
-            "@type": "Organization",
-            name: "Freelance",
-          },
-          knowsAbout: siteConfig.author.skills,
-          description: siteConfig.defaultDescription,
-        }}
       />
       {/* Background Effects */}
       <StarBackground />
