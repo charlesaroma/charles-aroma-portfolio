@@ -116,7 +116,7 @@ export const ProjectsSection = () => {
             href="https://github.com/charlesaroma"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 font-semibold text-sm md:text-lg shadow-lg hover:shadow-xl hover:scale-105"
+            className="inline-flex items-center gap-3 px-4 py-2.5 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 font-semibold text-sm md:text-lg shadow-lg hover:shadow-xl hover:scale-105"
           >
             View More Projects
             <ArrowRight size={22} />
