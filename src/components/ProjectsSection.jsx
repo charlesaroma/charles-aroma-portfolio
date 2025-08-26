@@ -89,7 +89,7 @@ export const ProjectsSection = () => {
                       href={project.demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 text-sm font-medium"
+                      className="flex items-center gap-1 px-2 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 text-sm font-medium"
                     >
                       <ExternalLink size={16} />
                       Live Demo
@@ -98,7 +98,7 @@ export const ProjectsSection = () => {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg border border-border hover:bg-secondary transition-all duration-300 text-sm font-medium"
+                      className="flex items-center gap-1 px-4 py-2 rounded-lg border border-border hover:bg-secondary transition-all duration-300 text-xs md:text-sm font-medium"
                     >
                       <Github size={16} />
                       Code
@@ -116,7 +116,7 @@ export const ProjectsSection = () => {
             href="https://github.com/charlesaroma"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 font-semibold text-lg shadow-lg hover:shadow-xl hover:scale-105"
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 font-semibold text-sm md:text-lg shadow-lg hover:shadow-xl hover:scale-105"
           >
             View More Projects
             <ArrowRight size={22} />
