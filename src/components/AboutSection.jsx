@@ -23,7 +23,7 @@ export const AboutSection = () => {
       <div className="container mx-auto max-w-5xl">
         {/* Section Header */}
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          About <span className="text-primary"> Me</span>
+          About <span className="text-primary"> Charles Aroma</span>
         </h2>
 
         {/* Main Content Grid */}
