@@ -109,7 +109,7 @@ export const HeroSection = () => {
               Get In Touch
             </a>
             <a 
-              href="/CV Charles Aroma.pdf" 
+              href="/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-secondary text-secondary-foreground hover:bg-secondary/80 transition-all duration-300 px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium text-center text-sm sm:text-base"
